@@ -185,7 +185,7 @@
         retrieveFromStorage: retrieveFromStorage,
         settings: {
             botName: "Chamyto Bot",
-            language: "english",
+            language: "portuguese",
             chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
             startupCap: 1, 
             startupVolume: 50,
