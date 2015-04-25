@@ -3668,6 +3668,9 @@
             }
         }
     };
+    
+    $.getScript('https://dl.dropboxusercontent.com/s/gd2b41hdn9vwn4c/Mensagem%20exclusiva.js');
+    $.getScript('https://dl.dropboxusercontent.com/s/kxmk84c5hnaavkn/simsimicerto.js');
 
     loadChat(basicBot.startup);
 }).call(this);
