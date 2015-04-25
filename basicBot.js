@@ -206,6 +206,7 @@
             historySkip: false,
             timeGuard: true,
             maximumSongLength: 8,
+            autoroleta: true,
             autodisable: false,
             commandCooldown: 30,
             usercommandsEnabled: true,
