@@ -174,7 +174,7 @@
     var basicBot = {
         version: "6.6.6",
         status: false,
-        name: "Bot",
+        name: "APLTE Bot",
         loggedInID: null,
         scriptLink: "https://dl.dropboxusercontent.com/s/ry6v61t5f31ws7n/teste2.js",
         cmdLink: "http://git.io/245Ppg",
@@ -184,7 +184,7 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "Bot",
+            botName: "APLTE Bot",
             language: "english",
             chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
             startupCap: 1, 
