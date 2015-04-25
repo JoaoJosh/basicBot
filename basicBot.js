@@ -1729,6 +1729,19 @@
                 }
             },
             
+            ajudaCommand: {
+                command: 'ajuda',
+                rank: 'user',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if(!bot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                    API.sendChat("/me Veja um tutorial básico de como usar o plug: http://i.imgur.com/eSp2Y3x.png");
+                    }
+                }
+            };
+            
             cantadaCommand: {
                 command: 'cantada',
                 rank: 'user',
