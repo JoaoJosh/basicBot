@@ -289,7 +289,7 @@
             afkInterval: null,
             autoskip: false,
             autoskipTimer: null,
-            autoroletaInterval: 30,
+            autoroletaInterval: 15,
             autoroletaFunc: function () {
                 if (basicBot.status && basicBot.settings.autoroleta) {
                     API.sendChat('Roleta automática!');
