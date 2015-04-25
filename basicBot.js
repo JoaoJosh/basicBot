@@ -289,7 +289,7 @@
             afkInterval: null,
             autoskip: false,
             autoskipTimer: null,
-            autoroletaInterval: 15,
+            autoroletaInterval: 30,
             autoroletaFunc: function () {
                 if (basicBot.status && basicBot.settings.autoroleta) {
                     API.sendChat('Roleta automática!');
@@ -1308,7 +1308,7 @@
             }
             API.chatLog('Avatars capped at ' + basicBot.settings.startupCap);
             API.chatLog('Volume set to ' + basicBot.settings.startupVolume);
-            loadChat(API.sendChat(subChat(basicBot.chat.online, {botname: basicBot.settings.botName, version: basicBot.version})));
+            loadChat(API.sendChat("/me O Chamyto bot está funfando!");
         },
         commands: {
             executable: function (minRank, chat) {
