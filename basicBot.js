@@ -1283,7 +1283,7 @@
             }, 10 * 1000);
             basicBot.room.autoroletaInterval = setInterval(function () {
                 basicBot.room.autoroletaFunc();
-            }, 60 * 60 * 1000);
+            }, 30 * 30 * 1000);
             basicBot.room.autodisableInterval = setInterval(function () {
                 basicBot.room.autodisableFunc();
             }, 60 * 60 * 1000);
