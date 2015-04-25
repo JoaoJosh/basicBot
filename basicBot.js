@@ -1772,8 +1772,8 @@
                 }
             },
             
-            Command: {
-                command: 'cookie',
+            punirCommand: {
+                command: 'punir',
                 rank: 'user',
                 type: 'startsWith',
                 cookies: ['Te bateu com um skate!',
