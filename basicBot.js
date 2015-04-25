@@ -341,7 +341,7 @@
                     basicBot.room.roulette.countdown = setTimeout(function () {
                         basicBot.room.roulette.endRoulette();
                     }, 60 * 1000);
-                    API.sendChat(basicBot.chat.isopen);
+                    API.sendChat(":warning: @djs A roleta foi iniciada, o vencedor será movido para a posição 1. Digite !join para participar :warning:");
                 },
                 endRoulette: function () {
                     basicBot.room.roulette.rouletteStatus = false;
@@ -1308,7 +1308,7 @@
             }
             API.chatLog('Avatars capped at ' + basicBot.settings.startupCap);
             API.chatLog('Volume set to ' + basicBot.settings.startupVolume);
-            API.sendChat("O Chamyto bot v6.6.6 está online.");
+            API.sendChat("/me O Chamyto bot v6.6.6 está online :heart:");
         },
         commands: {
             executable: function (minRank, chat) {
@@ -2478,7 +2478,7 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         storeToStorage();
-                        API.sendChat(basicBot.chat.kill);
+                        API.sendChat("/me Chamyto bot desativado, e morreu...");
                         basicBot.disconnectAPI();
                         setTimeout(function () {
                             kill();
