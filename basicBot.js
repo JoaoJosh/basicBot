@@ -1728,6 +1728,204 @@
                     }
                 }
             },
+            
+            cantadaCommand: {
+                command: 'cantada',
+                rank: 'user',
+                type: 'startsWith',
+                cookies: ['Disse "Gata se você fosse um peido eu nunca mais iria te soltar."',
+                    'Disse "Gata, me chama de jedi que te mostro meu sabre de luz."',
+                    'Disse "Se você fosse hamburger, você seria o x-princesa ."',
+                    'Disse "Gata não sou escoteiro mas já armei minha barraca quando te vi."',
+                    'Disse "Me chama de bicicleta e fica de perna aberta em cima de mim."',
+                    'Disse "Não sou dj mas quero te fazer uns remix."',
+                    'Disse "Me chama de lagartixa e me joga na parede."',
+                    'Disse "Me chama de sorvete e vem me chupar."',
+                    'Disse "Economize água e tome banho comigo."',
+                    'Disse "Me chama de ator porno e transa comigo."',
+                    'Disse "Me chama de roceiro e pega na minha inxada, delicia."',
+                    'Disse "Me chama de bombeiro e deixa eu apagar seu fogo."',
+                    'Disse "Não sou mosquito mas to louco pra te dar uma picada."',
+                    'Disse "Não sou nego ban, mas eu vou gozar vem que eu vou te tacar o piru."',
+                    'Disse "Me chama de principe em vem ser a princesa do meu castelo."',
+                    'Disse "Você não é caverna mas eu to louco pra entrar em você."',
+                    'Disse "Me chama de jogador de baseball e pega no meu taco."',
+                    'Disse "Eu com meu birimbal, você com seu pandeiro, é capoeira a noite toda."',
+                    'Disse "Você caiu do céu? Porque voce parece um anjo."',
+                    'Disse "Me chama de Shrek e vem ser minha Fiona."',
+                    'Disse "Me chama de relogio e tira meu atraso."',
+                    'Disse "Faz um meu pau de trampolim"'
+                ],
+                getCookie: function () {
+                    var c = Math.floor(Math.random() * this.cookies.length);
+                    return this.cookies[c];
+                },
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+
+                        var space = msg.indexOf(' ');
+                        if (space === -1) {
+                            API.sendChat(basicBot.chat.eatcookie);
+                            return false;
+                        }
+                        else {
+                            var name = msg.substring(space + 2);
+                            var user = basicBot.userUtilities.lookupUserName(name);
+                            if (user === false || !user.inRoom) {
+                                return API.sendChat("/me Use !cantada @NickDeAlguém para dar uma cantada em alguém.");
+                            }
+                            else if (user.username === chat.un) {
+                                return API.sendChat("/me Use !cantada @NickDeAlguém para dar uma cantada em alguém.");
+                            }
+                            else {
+                                return API.sendChat(subChat(basicBot.chat.cookie, {nameto: user.username, namefrom: chat.un, cookie: this.getCookie()}));
+                            }
+                        }
+                    }
+                }
+            },
+            
+            giftCommand: {
+                command: 'gift',
+                rank: 'user',
+                type: 'startsWith',
+                cookies: ['Te de um PS4',
+                    'Te deu um X-box ONE',
+                    'Te deu um carrinho de controle remoto',
+                    'Te deu um jogo da vida',
+                    'Te deu uma meia',
+                    'Te deu uma cueca',
+                    'Te deu uma calcinha',
+                    'Te deu uma inxada',
+                    'Te deu um Pc Gamer',
+                    'Te deu um colar de brilhantes',
+                    'Te deu uma pulseira de ouro'
+                ],
+                getCookie: function () {
+                    var c = Math.floor(Math.random() * this.cookies.length);
+                    return this.cookies[c];
+                },
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+
+                        var space = msg.indexOf(' ');
+                        if (space === -1) {
+                            API.sendChat(basicBot.chat.eatcookie);
+                            return false;
+                        }
+                        else {
+                            var name = msg.substring(space + 2);
+                            var user = basicBot.userUtilities.lookupUserName(name);
+                            if (user === false || !user.inRoom) {
+                                return API.sendChat("/me Use !gift @NickDeAlguém para dar um presente.");
+                            }
+                            else if (user.username === chat.un) {
+                                return API.sendChat("/me Use !gift @NickDeAlguém para dar um presente.");
+                            }
+                            else {
+                                return API.sendChat(subChat(basicBot.chat.cookie, {nameto: user.username, namefrom: chat.un, cookie: this.getCookie()}));
+                            }
+                        }
+                    }
+                }
+            },
+            
+            hugCommand: {
+                command: 'hug',
+                rank: 'user',
+                type: 'startsWith',
+                cookies: ['Te de um abraço apertado! :relaxed:',
+                    'Nada de abraços!!! Ele(a) pertou sua bundinha :smiling_imp:',
+                    'Te deu um forte abraço de urso'
+                ],
+                getCookie: function () {
+                    var c = Math.floor(Math.random() * this.cookies.length);
+                    return this.cookies[c];
+                },
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+
+                        var space = msg.indexOf(' ');
+                        if (space === -1) {
+                            API.sendChat(basicBot.chat.eatcookie);
+                            return false;
+                        }
+                        else {
+                            var name = msg.substring(space + 2);
+                            var user = basicBot.userUtilities.lookupUserName(name);
+                            if (user === false || !user.inRoom) {
+                                return API.sendChat("/me Use !hug @NickDeAlguém para abraçar alguém.");
+                            }
+                            else if (user.username === chat.un) {
+                                return API.sendChat("/me Use !hug @NickDeAlguém para abraçar alguém.");
+                            }
+                            else {
+                                return API.sendChat(subChat(basicBot.chat.cookie, {nameto: user.username, namefrom: chat.un, cookie: this.getCookie()}));
+                            }
+                        }
+                    }
+                }
+            },
+            
+            sacanagemCommand: {
+                command: 'sacanagem',
+                rank: 'user',
+                type: 'startsWith',
+                cookies: ['Apertou seu peito',
+                    'Bateu uma pra você',
+                    'Te fez um oral',
+                    'Apertou sua bunda',
+                    'Vai te deixar um oco :o:',
+                    'Comeu seu cu',
+                    'Tirou sua virgindade',
+                    'Ta afim de te fuder até o talo',
+                    'Ta afim de transar com você',
+                    'Te deu uma dedada',
+                    'Te deu uma chupada no pescoço',
+                    'Te deu um beijo de língua',
+                    'Gozou na sua cara',
+                    'Ta afim de relaxar com você'
+                ],
+                getCookie: function () {
+                    var c = Math.floor(Math.random() * this.cookies.length);
+                    return this.cookies[c];
+                },
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+
+                        var space = msg.indexOf(' ');
+                        if (space === -1) {
+                            API.sendChat(basicBot.chat.eatcookie);
+                            return false;
+                        }
+                        else {
+                            var name = msg.substring(space + 2);
+                            var user = basicBot.userUtilities.lookupUserName(name);
+                            if (user === false || !user.inRoom) {
+                                return API.sendChat("/me Use !sacanagem @NickDeAlguém para falar uma safadeza pra alguém.");
+                            }
+                            else if (user.username === chat.un) {
+                                return API.sendChat("/me Use !sacanagem @NickDeAlguém para falar uma safadeza pra alguém.");
+                            }
+                            else {
+                                return API.sendChat(subChat(basicBot.chat.cookie, {nameto: user.username, namefrom: chat.un, cookie: this.getCookie()}));
+                            }
+                        }
+                    }
+                }
+            },
 
             cookieCommand: {
                 command: 'cookie',
@@ -1806,10 +2004,10 @@
                             var name = msg.substring(space + 2);
                             var user = basicBot.userUtilities.lookupUserName(name);
                             if (user === false || !user.inRoom) {
-                                return API.sendChat("/me Digite !cookie @NickDeAlguém para punir.");
+                                return API.sendChat("/me Digite !punir @NickDeAlguém para punir.");
                             }
                             else if (user.username === chat.un) {
-                                return API.sendChat("/me Digite !cookie @NickDeAlguém para punir.");
+                                return API.sendChat("/me Digite !punir @NickDeAlguém para punir.");
                             }
                             else {
                                 return API.sendChat(subChat(basicBot.chat.cookie, {nameto: user.username, namefrom: chat.un, cookie: this.getCookie()}));
