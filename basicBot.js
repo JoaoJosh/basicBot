@@ -1308,7 +1308,7 @@
             }
             API.chatLog('Avatars capped at ' + basicBot.settings.startupCap);
             API.chatLog('Volume set to ' + basicBot.settings.startupVolume);
-            loadChat(API.sendChat("/me O Chamyto bot v6.6.6 está online");
+            loadChat(API.sendChat("O Chamyto bot está online.");
         },
         commands: {
             executable: function (minRank, chat) {
