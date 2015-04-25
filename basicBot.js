@@ -288,6 +288,13 @@
             afkInterval: null,
             autoskip: false,
             autoskipTimer: null,
+            autoroletaInterval: 15,
+            autoroletaFunc: function () {
+                if (basicBot.status && basicBot.settings.autoroleta) {
+                    API.sendChat('Roleta automática!');
+                    API.chatLog('!roulette');
+                }
+            },
             autodisableInterval: null,
             autodisableFunc: function () {
                 if (basicBot.status && basicBot.settings.autodisable) {
@@ -1273,6 +1280,9 @@
             basicBot.room.afkInterval = setInterval(function () {
                 basicBot.roomUtilities.afkCheck()
             }, 10 * 1000);
+            basicBot.room.autoroletaInterval = setInterval(function () {
+                basicBot.room.autoroletaFunc();
+            }, 60 * 60 * 1000);
             basicBot.room.autodisableInterval = setInterval(function () {
                 basicBot.room.autodisableFunc();
             }, 60 * 60 * 1000);
@@ -1490,6 +1500,27 @@
                         var inactivity = Date.now() - lastActive;
                         var time = basicBot.roomUtilities.msToStr(inactivity);
                         API.sendChat(subChat(basicBot.chat.inactivefor, {name: chat.un, username: name, time: time}));
+                    }
+                }
+            },
+            
+            autoroletaCommand: {
+                command: 'autoroleta',
+                rank: 'bouncer',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (basicBot.settings.autoroleta) {
+                            basicBot.settings.autoroleta = !basicBot.settings.autoroleta;
+                            return API.sendChat("/me A roleta automática foi desativada.");
+                        }
+                        else {
+                            basicBot.settings.autoroletae = !basicBot.settings.autoroleta;
+                            return API.sendChat("/me A roleta automática foi ativada.");
+                        }
+
                     }
                 }
             },
