@@ -1308,7 +1308,7 @@
             }
             API.chatLog('Avatars capped at ' + basicBot.settings.startupCap);
             API.chatLog('Volume set to ' + basicBot.settings.startupVolume);
-            loadChat(API.sendChat("O Chamyto bot está online.");
+            API.sendChat("O Chamyto bot v6.6.6 está online.");
         },
         commands: {
             executable: function (minRank, chat) {
@@ -1800,7 +1800,7 @@
 
                         var space = msg.indexOf(' ');
                         if (space === -1) {
-                            API.sendChat(basicBot.chat.eatcookie);
+                            API.sendChat("/me Use !cantada @NickDeAlguém para dar uma cantada em alguém.");
                             return false;
                         }
                         else {
@@ -1848,7 +1848,7 @@
 
                         var space = msg.indexOf(' ');
                         if (space === -1) {
-                            API.sendChat(basicBot.chat.eatcookie);
+                            API.sendChat("/me Use !gift @NickDeAlguém para dar um presente.");
                             return false;
                         }
                         else {
@@ -1888,7 +1888,7 @@
 
                         var space = msg.indexOf(' ');
                         if (space === -1) {
-                            API.sendChat(basicBot.chat.eatcookie);
+                            API.sendChat("/me Use !hug @NickDeAlguém para abraçar alguém.");
                             return false;
                         }
                         else {
@@ -1939,7 +1939,7 @@
 
                         var space = msg.indexOf(' ');
                         if (space === -1) {
-                            API.sendChat(basicBot.chat.eatcookie);
+                            API.sendChat("/me Use !sacanagem @NickDeAlguém para falar uma safadeza pra alguém.");
                             return false;
                         }
                         else {
@@ -1982,7 +1982,7 @@
 
                         var space = msg.indexOf(' ');
                         if (space === -1) {
-                            API.sendChat(basicBot.chat.eatcookie);
+                            API.sendChat("/me Bolacha ou biscoito?");
                             return false;
                         }
                         else {
@@ -2029,7 +2029,7 @@
 
                         var space = msg.indexOf(' ');
                         if (space === -1) {
-                            API.sendChat(basicBot.chat.eatcookie);
+                            API.sendChat("/me Digite !punir @NickDeAlguém para punir.");
                             return false;
                         }
                         else {
