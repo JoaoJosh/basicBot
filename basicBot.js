@@ -1506,7 +1506,7 @@
             
             autoroletaCommand: {
                 command: 'autoroleta',
-                rank: 'bouncer',
+                rank: 'mod',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1517,7 +1517,7 @@
                             return API.sendChat("/me A roleta automática foi desativada.");
                         }
                         else {
-                            basicBot.settings.autoroletae = !basicBot.settings.autoroleta;
+                            basicBot.settings.autoroleta = !basicBot.settings.autoroleta;
                             return API.sendChat("/me A roleta automática foi ativada.");
                         }
 
