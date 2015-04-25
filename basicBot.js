@@ -176,7 +176,7 @@
         status: false,
         name: "Bot",
         loggedInID: null,
-        scriptLink: "https://dl.dropboxusercontent.com/s/px2f1eqmurpwgx8/Teste1.js",
+        scriptLink: "https://dl.dropboxusercontent.com/s/ry6v61t5f31ws7n/teste2.js",
         cmdLink: "http://git.io/245Ppg",
         chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
         chat: null,
