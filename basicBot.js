@@ -341,7 +341,7 @@
                     basicBot.room.roulette.countdown = setTimeout(function () {
                         basicBot.room.roulette.endRoulette();
                     }, 60 * 1000);
-                    API.sendChat("/me :warning: @djs A roleta foi iniciada, o vencedor será movido para a posição 1. Digite !join para participar :warning:");
+                    API.sendChat("/me @djs A roleta foi iniciada, o vencedor será movido para a posição 1. Digite !join para participar :warning:");
                 },
                 endRoulette: function () {
                     basicBot.room.roulette.rouletteStatus = false;
