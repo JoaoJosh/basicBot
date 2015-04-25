@@ -3495,7 +3495,7 @@
             },
             
             aquelacarinhaCommand: {
-                command: 'ue',
+                command: 'aquelacarinha',
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
