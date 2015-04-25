@@ -1,10 +1,3 @@
-/**
- *Copyright 2014 Yemasthui
- *Modifications (including forks) of the code to fit personal needs are allowed only for personal use and should refer back to the original source.
- *This software is not for profit, any extension, or unauthorised person providing this software is not authorised to be in a position of any monetary gain from this use of this software. Any and all money gained under the use of the software (which includes donations) must be passed on to the original author.
- */
-
-
 (function () {
 
     API.getWaitListPosition = function(id){
@@ -174,34 +167,34 @@
         return m;
     };
 
-    var botCreator = "Matthew (Yemasthui)";
-    var botMaintainer = "Benzi (Quoona)"
-    var botCreatorIDs = ["3851534", "4105209"];
+    var botCreator = "Josh";
+    var botMaintainer = "Josh"
+    var botCreatorIDs = ["3573759"];
 
     var basicBot = {
-        version: "2.3.4",
+        version: "6.6.6",
         status: false,
-        name: "basicBot",
+        name: "Bot",
         loggedInID: null,
         scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
+        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "basicBot",
+            botName: "Bot",
             language: "english",
-            chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
-            startupCap: 1, // 1-200
-            startupVolume: 0, // 0-100
-            startupEmoji: false, // true or false
+            chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
+            startupCap: 1, 
+            startupVolume: 50,
+            startupEmoji: true,
             cmdDeletion: true,
             maximumAfk: 120,
-            afkRemoval: true,
+            afkRemoval: false,
             maximumDc: 60,
-            bouncerPlus: true,
+            bouncerPlus: false,
             blacklistEnabled: true,
             lockdownEnabled: false,
             lockGuard: false,
@@ -212,11 +205,11 @@
             voteSkipLimit: 10,
             historySkip: false,
             timeGuard: true,
-            maximumSongLength: 10,
-            autodisable: true,
+            maximumSongLength: 8,
+            autodisable: false,
             commandCooldown: 30,
             usercommandsEnabled: true,
-            lockskipPosition: 3,
+            lockskipPosition: 2,
             lockskipReasons: [
                 ["theme", "This song does not fit the room theme. "],
                 ["op", "This song is on the OP list. "],
@@ -265,10 +258,10 @@
             afkRankCheck: "ambassador",
             motdEnabled: false,
             motdInterval: 5,
-            motd: "Temporary Message of the Day",
-            filterChat: true,
-            etaRestriction: false,
-            welcome: true,
+            motd: "Mensagem Temporária do Dia",
+            filterChat: false,
+            etaRestriction: true,
+            welcome: false,
             opLink: null,
             rulesLink: null,
             themeLink: null,
@@ -347,7 +340,7 @@
                     var ind = Math.floor(Math.random() * basicBot.room.roulette.participants.length);
                     var winner = basicBot.room.roulette.participants[ind];
                     basicBot.room.roulette.participants = [];
-                    var pos = Math.floor((Math.random() * API.getWaitList().length) + 1);
+                    var pos = 1;
                     var user = basicBot.userUtilities.lookupUser(winner);
                     var name = user.username;
                     API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: pos}));
