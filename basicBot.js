@@ -174,9 +174,9 @@
     var basicBot = {
         version: "6.6.6",
         status: false,
-        name: "APLTE Bot",
+        name: "bot",
         loggedInID: null,
-        scriptLink: "https://dl.dropboxusercontent.com/s/ry6v61t5f31ws7n/teste2.js",
+        scriptLink: "https://dl.dropboxusercontent.com/s/f9kpjbnfx6vg246/teste3.j",
         cmdLink: "http://git.io/245Ppg",
         chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
         chat: null,
@@ -184,7 +184,7 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "APLTE Bot",
+            botName: "Chamyto Bot",
             language: "english",
             chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
             startupCap: 1, 
@@ -1308,7 +1308,7 @@
             }
             API.chatLog('Avatars capped at ' + basicBot.settings.startupCap);
             API.chatLog('Volume set to ' + basicBot.settings.startupVolume);
-            loadChat(API.sendChat("/me O Chamyto bot está funfando!");
+            loadChat(API.sendChat("/me O Chamyto bot v6.6.6 está online");
         },
         commands: {
             executable: function (minRank, chat) {
