@@ -71,15 +71,15 @@ Segurança
 |!restricteta | | Ativa/Desativa a restrição do eta : usuários cinza pode usá-lo uma vez por hora. |
 |!sessionstats | | display stats for the current session |
 |!skip | | Skipa a música atual. |
-|!status | | Exibi o status do bot e algumas configurações. |
+|!status | | Exibe o status do bot e algumas configurações. |
 |!timeguard | | Ativa/Desativa o timeguard |
-|!togglebl | | toggle the blacklist |
-|!togglemotd | | toggle the motd |
-|!togglevoteskip | | toggle the voteskip |
-|!unban | @user | unban user |
-|!unmute | | unmute user |
-|!voteratio | @user | display the vote statistic for a user |
-|!whois | @user | returns plug related information about user |
+|!togglebl | | Ativa/Desativa a blacklist. |
+|!togglemotd | | Ativa/Desativa o motd. |
+|!togglevoteskip | | Ativa/Desativa o voteskip. |
+|!unban | @user | Desbane um usuário. |
+|!unmute | | Desmuta um usuáro. |
+|!voteratio | @user | Exibe a estatística de voto para um usuário. |
+|!whois | @user | Manda as informações de um usuário. |
 
 DJ Residente
 ------------
