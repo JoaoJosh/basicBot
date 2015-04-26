@@ -1,48 +1,49 @@
-Commands:
+Comandos :
 =========
 
-X specifies a number  
-Arguments between ( ) are optional
+X especificar com um número  
+Argumentos entre ( ) são opcionais
 
 
-Manager
--------
+Coordenador
+-----------
 
-|Command | Arguments |  Description |
+|Comando | Argumentos |  Descrição |
 |:------:|:---------:|:--------------------------------------:|
-|!afklimit | X | sets the maximum afk time |
-|!clearchat | |clears the chat |
-|!cycle | | toggle DJ cycle |
-|!cycletimer | X | set the maximum DJ cycle time for when cycleguard is enabled |
-|!locktimer | X | set the maximum time the waitlist can be locked if lockguard is enabled |
-|!logout | | logs out account bot is hosted on |
-|!refresh | | refreshes the browser of whoever runs the bot |
-|!usercmdcd | X | set the cooldown on commands by grey users |
-|!usercommands | | toggle user commands |
-|!voteskip | (X) | when no argument is specified, returns the current voteskip limit, when X is specified, voteskip limit is updated to the new specified limit. |
+|!afklimit | X | Muda o tempo máximo de afk. |
+|!clearchat | |Limpa o chat. |
+|!autoroleta | |Ativa/Desativa a roleta automática. |
+|!cycle | | Liga/Desliga o clico de djs. |
+|!cycletimer | X | Muda o tempo máximo do clico de djs quando o cycleguard está ligado. |
+|!locktimer | X | Muda o tempo máximo que a lista de espera pode ficar trancada quando o lockguard está ligado.|
+|!logout | | Faz logout da conta que o bot está hospedado. |
+|!refresh | | Atualiza o navegador do bot. |
+|!usercmdcd | X | Muda o cooldown dos comandos dos usuários. |
+|!usercommands | | Ativa/Desativa os comandos dos usuários. |
+|!voteskip | (X) | Quando nenhum argumento for especificado, volta para o limite de voteskip atual, quando X for especificado, limite de voteskip é atualizado para o novo limite especificado. |
 
-Bouncer+
---------
+Segurança+
+----------
 
-|Command | Arguments |  Description |
+|Comando | Argumentos |  Descrição |
 |:------:|:---------:|:--------------------------------------:|
-|!add | @user | add user to the waitlist |
-|!afkremoval | | toggles the afk check |
-|!autoskip | | skips songs automatically when they're done (use when the circles-bug happens) |
-|!bouncer+ | | disable bouncer+ |
+|!add | @user | Adiciona o usuário na lista de espera. |
+|!afkremoval | | Ativa/Desativa a remoção de afk da lista. |
+|!autoskip | | Pula automáticamente as músicas (quando ocorre bugs no plug). |
+|!bouncer+ | | Ativa/Desativa o bouncer+ |
 |~~!deletechat~~ | ~~@user~~ | ~~delete all the chats by a certain user~~ |
-|!lock | | lock the waitlist |
-|!lockdown | | lock down the room: only staff can chat |
-|!maxlength | X | specify the maximum length a song can be when timeguard is enabled |
-|!move | @user (X) | moves user to position X on the waitlist, default is position 1 |
-|!remove | @user | remove user from the waitlist |
-|!roulette | | start a roulette |
-|!songstats | | toggle song statistics |
-|!unlock | | unlock the waitlist |
-|!welcome | | toggle the welcome message on user join |
+|!lock | | Tranca a lista de espera. |
+|!lockdown | | Apenas a staff pode falar no chat. |
+|!maxlength | X | Especifica o tempo máximo que uma música pode ser tocada quando o timeguard está ligado. |
+|!move | @user (X) | Move o usuário para posição X (move para 1 se não tiver especificado). |
+|!remove | @user | Remove o usuário da lista de espera. |
+|!roulette | | Roda a roleta. |
+|!songstats | | Ativa/Desativa as estatísticas da música após ser tocada |
+|!unlock | | Destranca a lista de espera. |
+|!welcome | | Ativa/Desativa a mensagem de boas vindas. |
 
-Bouncer
--------
+Segurança
+---------
 
 |Command | Arguments |  Description |
 |:------:|:---------:|:--------------------------------------:|
@@ -80,39 +81,43 @@ Bouncer
 |!voteratio | @user | display the vote statistic for a user |
 |!whois | @user | returns plug related information about user |
 
-Resident DJ
------------
+DJ Residente
+------------
 
-|Command | Arguments |  Description |
+|Comando | Argumento |  Descrição |
 |:------:|:---------:|:--------------------------------------:|
-|!link | | give a link to the current song
+|!link | | Da o link da música atual
 
 
 
-User
-----
+Usuário
+-------
 
-|Command | Arguments |  Description |
+|Comando | Argumento |  Descrição |
 |:------:|:---------:|:--------------------------------------:|
-|!8ball | (message) | ask the bot a question, the bot will return random variations of a yes or no answer. |
-|!autowoot | | links to PlugCubed, the advised script/plugin to use for autowooting |
-|!ba | | explains the Brand Ambassador rank |
-|!commands | | gives a link to the commands |
-|!cookie | (@user) | give a cookie to user |
-|!dclookup / !dc | | use dclookup on yourself |
-|!emoji | | a link to a list with emoji's |
-|!eta | | shows how long before you reach the booth |
-|!fb | | links to the room's Facebook page (if set in the settings) |
-|!ghostbuster | @user | checks if user is ghosting |
-|!gif | (message) | returns gif (from giphy) related to the tag provided. Returns a random gif if no tags are provided. |
-|!help | | links to an image to help get people started on plug |
-|!join | | join the roulette if it's up |
-|!leave | | leave the roulette if you joined |
-|!link | | when the user is the DJ, give a link to the current song |
-|!op | | links to the OverPlayed list (if set in the settings) |
+|!sacanagem | (@user) | Manda uma mensagem safada para o usuário especificado. |
+|!gift | (@user) | Manda um presente para o usuário especificado. |
+|!punir | (@user) | Manda uma punição para o usuário especificado. |
+|!cantada | (@user) | Manda uma cantada engraçada para o usuário especificado. |
+|!hug | (@user) | Da um abraço no usuário especificado. |
+|!autowoot | | Manda o link do OrigemWoot. |
+|!ba | | Explica ao usuário o que é um BA (Brand Ambassador). |
+|!commands | | Manda os comandos do ChatBot. |
+|!cookie | (@user) | Da um cookie ao usuário especificado. |
+|!dclookup / !dc | | Usar dclookup em si mesmo. |
+|!emoji | | Manda o link da lista de emojis. |
+|!eta | | Mostra quanto tempo aproximadamente falta para você tocar. |
+|!fb | | Manda o link da página no Facebook da sala. |
+|!ghostbuster | @user | Vê se o usuário está  |
+|!gif | (message) | retorna gif (de giphy ) relacionados com a tag fornecida. |
+|!help | | Manda uma imagem/tutorial básico de como usar o plug |
+|!join | | Entra na roleta. |
+|!leave | | Sai da roleta. |
+|!link | | Manda o link da música atual |
+|!op | | Manda o link da lista OverPlayed (Músicas tocadas exageradamente) |
 |!ping | | pong! |
-|!purchase | | returns link to purchase more plug notes |
-|!rules | | links to the rules (if set in the settings) |
-|!theme | | links to the room's theme (if set in the settings) |
-|!website | | links to the room's website (if set in the settings) |
-|!youtube | | links to the room's youtube page (if set in the settings) |
+|!purchase | | Manda o link para se tornar assinante |
+|!rules | | Manda o link com as regras da sala. |
+|!theme | | Manda o link do tema da sala. |
+|!website | | Manda o link com o site da sala. |
+|!youtube | | Manda o link do canal no YouTube da sala. |
