@@ -45,34 +45,34 @@ Segurança+
 Segurança
 ---------
 
-|Command | Arguments |  Description |
+|Comando | Argumentos |  Descrição |
 |:------:|:---------:|:--------------------------------------:|
-|!active | (X) | shows how many users chatted in the past X minutes. If no X specified, 60 is set as default |
-|!afkreset | @user | resets the afk time of user |
-|!afktime | @user | shows how long user has been afk |
-|!autodisable | | toggle the autodisable |
-|!ban | @user | bans user for 1 day |
-|!blacklist / !bl | blacklistname | add the song to the specified blacklist |
-|!blinfo | | get information required to blacklist a song |
-|!cycleguard | | toggles the cycleguard |
-|!dclookup / !dc | (@user) | do dclookup for user |
-|!english | @user | ask user to speak english (asked in the language they set plug to) |
-|!eta | (@user) | shows when user will reach the booth |
-|!filter | | toggles the chat filter |
-|!jointime | @user | shows how long the user has been in the room |
-|!kick | (X) | kicks user for X minutes, default is 0.25 minutes (15 seconds) |
-|!kill | | shut down the bot |
-|!lockguard | | toggle the lockguard |
-|!lockskip | (reason) | skip the song and move the dj back up (the position can be set with !lockskippos) |
-|!lockskippos | X | set the position to which lockskip moves the dj |
-|!motd | (X)/(message) | when no argument is specified, returns the Message of the Day, when X is specified, the MotD is given every X songs, when "message" is given, it sets the MotD to message |
+|!active | (X) | Mostra quantos usuários falaram no chat nos ultimos X minutos. Se nenhum X especificado, 60 é definido como padrão. |
+|!afkreset | @user | Reseta o tempo afk do usuário. |
+|!afktime | @user | mostra quanto tempo o usuário ficou afk. |
+|!autodisable | | Ativa/Desativa o autodisable. |
+|!ban | @user | Bane o usuário por um dia. |
+|!blacklist / !bl | blacklistname | adiciona a música á lista de músicas banidas. |
+|!blinfo | | obtém as informações necessárias para banir uma música. |
+|!cycleguard | | Ativa/Desativa o cycleguard. |
+|!dclookup / !dc | (@user) | usa o dclookup no usuários. |
+|!english | @user | Pede para o usuário falar em inglês. |
+|!eta | (@user) | Mostra quanto tempo falta aproximadamente para o usuário tocar. |
+|!filter | | Ativa/Desativa o filtro de palavras do chat. |
+|!jointime | @user | shows how long the user has been in the room. |
+|!kick | (X) | bane o usuário por X minutos, padrão é 0.25 minutos (15 segundos). |
+|!kill | | Desativa o bot. |
+|!lockguard | | Ativa/Desativa o lockguard. |
+|!lockskip | (reason) | Pula a música e volta o dj para 1. |
+|!lockskippos | X | Muda a posição que o lockskip irá mover o dj. |
+|!motd | (X)/(message) | Quando nenhum argumento for especificado, retorna a mensagem do dia , quando X for especificado, a mensagem é dada a cada X de canções, quando a " mensagem" é especificada , ele define a mensagem a ser mandada. |
 |!mute | @user (X) | mute user, for X minutes if X is specified, otherwise for an undefined period |
-|!reload | | reload the bot |
-|!restricteta | | toggles the restriction on eta: grey users can use it once an hour |
+|!reload | | reinicia o bot. |
+|!restricteta | | Ativa/Desativa a restrição do eta : usuários cinza pode usá-lo uma vez por hora. |
 |!sessionstats | | display stats for the current session |
-|!skip | | skip the current song |
-|!status | | display the bot's status and some settings |
-|!timeguard | | toggle the timeguard |
+|!skip | | Skipa a música atual. |
+|!status | | Exibi o status do bot e algumas configurações. |
+|!timeguard | | Ativa/Desativa o timeguard |
 |!togglebl | | toggle the blacklist |
 |!togglemotd | | toggle the motd |
 |!togglevoteskip | | toggle the voteskip |
