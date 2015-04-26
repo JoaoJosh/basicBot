@@ -292,7 +292,7 @@
             autoroletaInterval: 15,
             autoroletaFunc: function () {
                 if (basicBot.status && basicBot.settings.autoroleta) {
-                    API.sendChat('Roleta automática!');
+                    API.sendChat('/me Roleta automática!');
                     API.chatLog('!roulette');
                 }
             },
@@ -1576,7 +1576,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        API.sendChat(basicBot.chat.autowoot);
+                        API.sendChat("/me Recomendamos o OrigemWoot para autowoot http://origem-woot.com/");
                     }
                 }
             },
@@ -1736,7 +1736,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        API.sendChat(subChat(basicBot.chat.commandslink, {botname: basicBot.settings.botName, link: basicBot.cmdLink}));
+                        API.sendChat("/me Comandos do Chamyto bot: http://goo.gl/qIguBk");
                     }
                 }
             },
@@ -2896,7 +2896,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        API.sendChat(basicBot.chat.pong)
+                        API.sendChat("/me Pong! :P")
                     }
                 }
             },
