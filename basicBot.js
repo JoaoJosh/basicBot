@@ -2127,7 +2127,7 @@
                 }
             },
 
-            /*deletechatCommand: {
+            deletechatCommand: {
                 command: 'deletechat',
                 rank: 'mod',
                 type: 'startsWith',
@@ -2151,7 +2151,7 @@
                         API.sendChat(subChat(basicBot.chat.deletechat, {name: chat.un, username: name}));
                     }
                 }
-            },*/
+            },
 
             emojiCommand: {
                 command: 'emoji',
