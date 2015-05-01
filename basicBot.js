@@ -504,7 +504,7 @@
                     validDC = true;
                 }
                 var time = basicBot.roomUtilities.msToStr(timeDc);
-                if (!validDC) return API.sendChat("/me Você se desconectou a muito tempo atrás!");
+                if (!validDC) return API.sendChat("/me @"+ user.username +" você se desconectou a muito tempo atrás.");
                 var songsPassed = basicBot.room.roomstats.songCount - user.lastDC.songCount;
                 var afksRemoved = 0;
                 var afkList = basicBot.room.afkList;
