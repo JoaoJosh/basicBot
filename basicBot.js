@@ -289,7 +289,7 @@
             afkInterval: null,
             autoskip: false,
             autoskipTimer: null,
-            autoroletaInterval: 20,
+            autoroletaInterval: 25,
             autoroletaFunc: function () {
                 if (basicBot.status && basicBot.settings.autoroleta) {
                     API.sendChat('/me Roleta automática!');
@@ -1283,7 +1283,7 @@
             }, 10 * 1000);
             basicBot.room.autoroletaInterval = setInterval(function () {
                 basicBot.room.autoroletaFunc();
-            }, 30 * 30 * 1000);
+            }, 35 * 35 * 1000);
             basicBot.room.autodisableInterval = setInterval(function () {
                 basicBot.room.autodisableFunc();
             }, 60 * 60 * 1000);
