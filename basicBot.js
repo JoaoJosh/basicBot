@@ -494,7 +494,7 @@
                 var user = basicBot.userUtilities.lookupUser(id);
                 if (typeof user === 'boolean') return basicBot.chat.usernotfound;
                 var name = user.username;
-                if (user.lastDC.time === null) return API.sendChat("/me Não vi você se desconectar! :eyes:");
+                if (user.lastDC.time === null) return API.sendChat("/me @" + user.username + " não vi você se desconectar! :eyes:");
                 var dc = user.lastDC.time;
                 var pos = user.lastDC.position;
                 if (pos === null) return basicBot.chat.noposition;
@@ -504,7 +504,7 @@
                     validDC = true;
                 }
                 var time = basicBot.roomUtilities.msToStr(timeDc);
-                if (!validDC) return API.sendChat("/me @"+ user.username +" você se desconectou a muito tempo atrás.");
+                if (!validDC) return API.sendChat("/me @" + user.username + " você se desconectou a muito tempo atrás.");
                 var songsPassed = basicBot.room.roomstats.songCount - user.lastDC.songCount;
                 var afksRemoved = 0;
                 var afkList = basicBot.room.afkList;
