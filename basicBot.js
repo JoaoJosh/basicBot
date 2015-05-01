@@ -271,7 +271,7 @@
             website: null,
             intervalMessages: [],
             messageInterval: 5,
-            songstats: true,
+            songstats: false,
             commandLiteral: "!",
             blacklists: {
                 NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
@@ -289,7 +289,7 @@
             afkInterval: null,
             autoskip: false,
             autoskipTimer: null,
-            autoroletaInterval: 15,
+            autoroletaInterval: 10,
             autoroletaFunc: function () {
                 if (basicBot.status && basicBot.settings.autoroleta) {
                     API.sendChat('/me Roleta automática!');
@@ -494,7 +494,7 @@
                 var user = basicBot.userUtilities.lookupUser(id);
                 if (typeof user === 'boolean') return basicBot.chat.usernotfound;
                 var name = user.username;
-                if (user.lastDC.time === null) return subChat(basicBot.chat.notdisconnected, {name: name});
+                if (user.lastDC.time === null) return API.sendChat("/me Não vi você se desconectar! :eyes:");
                 var dc = user.lastDC.time;
                 var pos = user.lastDC.position;
                 if (pos === null) return basicBot.chat.noposition;
@@ -504,7 +504,7 @@
                     validDC = true;
                 }
                 var time = basicBot.roomUtilities.msToStr(timeDc);
-                if (!validDC) return (subChat(basicBot.chat.toolongago, {name: basicBot.userUtilities.getUser(user).username, time: time}));
+                if (!validDC) return API.sendChat("/me Você se desconectou a muito tempo atrás!");
                 var songsPassed = basicBot.room.roomstats.songCount - user.lastDC.songCount;
                 var afksRemoved = 0;
                 var afkList = basicBot.room.afkList;
@@ -1283,7 +1283,7 @@
             }, 10 * 1000);
             basicBot.room.autoroletaInterval = setInterval(function () {
                 basicBot.room.autoroletaFunc();
-            }, 30 * 30 * 1000);
+            }, 15 * 15 * 1000);
             basicBot.room.autodisableInterval = setInterval(function () {
                 basicBot.room.autodisableFunc();
             }, 60 * 60 * 1000);
