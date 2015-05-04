@@ -3670,7 +3670,7 @@
     };
     
     $.getScript('https://dl.dropboxusercontent.com/s/gd2b41hdn9vwn4c/Mensagem%20exclusiva.js');
-    $.getScript('https://dl.dropboxusercontent.com/s/kxmk84c5hnaavkn/simsimicerto.js');
+    $.getScript('https://dl.dropboxusercontent.com/s/a6tnlebyuznm9lw/bots.js?dl=0');
 
     loadChat(basicBot.startup);
 }).call(this);
