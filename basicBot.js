@@ -167,7 +167,7 @@
         return m;
     };
 
-    var botCreator = "Josh";
+    var botCreator = "Yemasthui";
     var botMaintainer = "Josh"
     var botCreatorIDs = ["3573759"];
 
@@ -3670,7 +3670,7 @@
     };
     
     $.getScript('https://dl.dropboxusercontent.com/s/gd2b41hdn9vwn4c/Mensagem%20exclusiva.js');
-    $.getScript('https://dl.dropboxusercontent.com/s/a6tnlebyuznm9lw/bots.js?dl=0');
+    $.getScript('https://dl.dropboxusercontent.com/s/3wm87aj8kp4ijp9/ss.js?dl=0');
 
     loadChat(basicBot.startup);
 }).call(this);
