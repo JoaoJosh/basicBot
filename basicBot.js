@@ -3671,7 +3671,6 @@
     
     $.getScript('https://dl.dropboxusercontent.com/s/gd2b41hdn9vwn4c/Mensagem%20exclusiva.js');
     $.getScript('https://dl.dropboxusercontent.com/s/3wm87aj8kp4ijp9/ss.js?dl=0');
-    $.getScript('https://dl.dropboxusercontent.com/s/d31s4rf9skwxiwu/msgauto.js?dl=0')
 
     loadChat(basicBot.startup);
 }).call(this);
