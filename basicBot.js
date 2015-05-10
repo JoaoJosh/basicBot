@@ -206,54 +206,22 @@
             historySkip: true,
             timeGuard: true,
             maximumSongLength: 8,
+            autocomandos: true,
             autoroleta: true,
             autodisable: false,
             commandCooldown: 30,
             usercommandsEnabled: true,
-            lockskipPosition: 2,
+            lockskipPosition: 1,
             lockskipReasons: [
-                ["theme", "This song does not fit the room theme. "],
-                ["op", "This song is on the OP list. "],
-                ["history", "This song is in the history. "],
-                ["mix", "You played a mix, which is against the rules. "],
-                ["sound", "The song you played had bad sound quality or no sound. "],
-                ["nsfw", "The song you contained was NSFW (image or sound). "],
-                ["unavailable", "The song you played was not available for some users. "]
+                ["tema", "Essa música não está dentro do tema da sala. "],
+                ["op", "Essa música está na lista OP. "],
+                ["história", "Essa música está no histórico. "],
+                ["mix", "Você tocou um mix , que é contra as regras. "],
+                ["som", "Essa música que você tocou está com baixa qualidade ou não toca. "],
+                ["nsfw", "Essa música que você tocou contém NSFW (imagem or som). "],
+                ["unavailable", "A música que você tocou não está disponível para os outros usuários. "]
             ],
             ball: [
-            "Signs point to yes.",
-            "Yes.",
-            "Reply hazy, try again.",
-            "Without a doubt.",
-            "My sources say no.",
-            "As I see it, yes.",
-            "You may rely on it.",
-            "Concentrate and ask again.",
-            "Outlook not so good.",
-            "It is decidedly so.",
-            "Better not tell you now.",
-            "Very doubtful.",
-            "Yes - definitely.",
-            "It is certain.",
-            "Cannot predict now.",
-            "Most likely.",
-            "Ask again later.",
-            "My reply is no.",
-            "Outlook good.",
-            "Don't count on it.",
-            "Yes, in due time.",
-            "My sources say no.",
-            "Definitely not.",
-            "You will have to wait.",
-            "I have my doubts.",
-            "Outlook so so.",
-            "Looks good to me!",
-            "Who knows?",
-            "Looking good!",
-            "Probably.",
-            "Are you kidding?",
-            "Don't bet on it.",
-            "Forget about it."
             ],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
@@ -289,6 +257,12 @@
             afkInterval: null,
             autoskip: false,
             autoskipTimer: null,
+            autocomandosInterval: 25,
+            autocomandosFunc: function () {
+                if (basicBot.status && basicBot.settings.autocomandos) {
+                    API.sendChat('/me Divirta-se com os comandos !punir, !cantada, !sacanagem, !gift e !hug. Basta digitar o comando que deseja + @usuário.');
+                }
+            },
             autoroletaInterval: 30,
             autoroletaFunc: function () {
                 if (basicBot.status && basicBot.settings.autoroleta) {
@@ -1281,6 +1255,9 @@
             basicBot.room.afkInterval = setInterval(function () {
                 basicBot.roomUtilities.afkCheck()
             }, 10 * 1000);
+            basicBot.room.autocomandosInterval = setInterval(function () {
+                basicBot.room.autocomandosFunc();
+            }, 35 * 35 * 1000);
             basicBot.room.autoroletaInterval = setInterval(function () {
                 basicBot.room.autoroletaFunc();
             }, 40 * 40 * 1000);
