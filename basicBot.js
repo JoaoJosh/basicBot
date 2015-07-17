@@ -894,7 +894,7 @@
                 var name = obj.dj.username;
                 for (var i = 0; i < apihistory.length; i++) {
                     if (apihistory[i].media.cid === obj.media.cid) {
-                        API.sendChat(subChat(basicBot.chat.songknown, {name: name}));
+                        API.sendChat("/me Esta musica esta o histórico");
                         basicBot.roomUtilities.booth.lockBooth();
                                 setTimeout(function (id) {
                                     API.moderateForceSkip();
