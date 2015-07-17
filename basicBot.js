@@ -895,18 +895,7 @@
                 for (var i = 0; i < apihistory.length; i++) {
                     if (apihistory[i].media.cid === obj.media.cid) {
                         API.sendChat(subChat(basicBot.chat.songknown, {name: name}));
-                        basicBot.roomUtilities.booth.lockBooth();
-                                setTimeout(function (id) {
-                                    API.moderateForceSkip();
-                                    basicBot.room.skippable = false;
-                                    setTimeout(function () {
-                                        basicBot.room.skippable = true
-                                    }, 5 * 1000);
-                                    setTimeout(function (id) {
-                                        basicBot.userUtilities.moveUser(id, basicBot.settings.lockskipPosition, false);
-                                        basicBot.room.queueable = true;
-                                        setTimeout(function () {
-                                            basicBot.roomUtilities.booth.unlockBooth();
+                        API.moderateForceSkip();
                         basicBot.room.historyList[i].push(+new Date());
                         alreadyPlayed = true;
                         }));
