@@ -257,13 +257,13 @@
             afkInterval: null,
             autoskip: false,
             autoskipTimer: null,
-            autocomandosInterval: 25,
+            autocomandosInterval: 35,
             autocomandosFunc: function () {
                 if (basicBot.status && basicBot.settings.autocomandos) {
                     API.sendChat('/me Divirta-se com os comandos !punir, !cantada, !sacanagem, !gift e !hug. Basta digitar o comando que deseja + @usuário.');
                 }
             },
-            autoroletaInterval: 30,
+            autoroletaInterval: 60,
             autoroletaFunc: function () {
                 if (basicBot.status && basicBot.settings.autoroleta) {
                     API.sendChat('/me Roleta automática!');
@@ -1257,10 +1257,10 @@
             }, 10 * 1000);
             basicBot.room.autocomandosInterval = setInterval(function () {
                 basicBot.room.autocomandosFunc();
-            }, 35 * 35 * 1000);
+            }, 40 * 40 * 1000);
             basicBot.room.autoroletaInterval = setInterval(function () {
                 basicBot.room.autoroletaFunc();
-            }, 40 * 40 * 1000);
+            }, 60 * 60 * 1000);
             basicBot.room.autodisableInterval = setInterval(function () {
                 basicBot.room.autodisableFunc();
             }, 60 * 60 * 1000);
