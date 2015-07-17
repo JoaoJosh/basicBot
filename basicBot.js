@@ -898,7 +898,7 @@
                         API.moderateForceSkip();
                         basicBot.room.historyList[i].push(+new Date());
                         alreadyPlayed = true;
-                        }));
+                        };
                 }
                 if (!alreadyPlayed) {
                     basicBot.room.historyList.push([obj.media.cid, +new Date()]);
