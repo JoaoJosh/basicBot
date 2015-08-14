@@ -169,7 +169,7 @@
 
     var botCreator = "Yemasthui";
     var botMaintainer = "Josh"
-    var botCreatorIDs = ["3573759"];
+    var botCreatorIDs = [""];
 
     var basicBot = {
         version: "6.6.6",
