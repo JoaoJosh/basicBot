@@ -409,7 +409,6 @@
 
             },
             getPermission: function (obj) { //1 requests
--               var u;
 -               if (typeof obj === "object") u = obj;
 -               else u = API.getUser(obj);
 -               for (var i = 0; i < botCreatorIDs.length; i++) {
