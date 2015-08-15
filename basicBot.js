@@ -409,27 +409,27 @@
 
             },
             getPermission: function (obj) { //1 requests
--                var u;
--                if (typeof obj === "object") u = obj;
--                else u = API.getUser(obj);
--                for (var i = 0; i < botCreatorIDs.length; i++) {
--                    if (botCreatorIDs[i].indexOf(u.id) > -1) return 10;
--                }
--                if (u.gRole < 2) return u.role;
--                else {
--                    switch (u.gRole) {
--                        case 2:
--                            return 7;
--                        case 3:
--                            return 8;
--                        case 4:
--                            return 9;
--                        case 5:
--                            return 10;
--                    }
--                }
--                return 0;
--            },
+-               var u;
+-               if (typeof obj === "object") u = obj;
+-               else u = API.getUser(obj);
+-               for (var i = 0; i < botCreatorIDs.length; i++) {
+-                   if (botCreatorIDs[i].indexOf(u.id) > -1) return 10;
+-               }
+-               if (u.gRole < 2) return u.role;
+-               else {
+-                   switch (u.gRole) {
+-                       case 2:
+-                           return 7;
+-                       case 3:
+-                           return 8;
+-                       case 4:
+-                           return 9;
+-                       case 5:
+-                           return 10;
+-                   }
+-               }
+-               return 0;
+-           },
             moveUser: function (id, pos, priority) {
                 var user = basicBot.userUtilities.lookupUser(id);
                 var wlist = API.getWaitList();
