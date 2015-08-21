@@ -178,7 +178,7 @@
         loggedInID: null,
         scriptLink: "https://dl.dropboxusercontent.com/s/f9kpjbnfx6vg246/teste3.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://dl.dropboxusercontent.com/s/r3tl1kreg0svc2u/tradu%C3%A7%C3%A3o.json",
+        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt-BR.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -186,7 +186,7 @@
         settings: {
             botName: "Chamyto Bot",
             language: "portuguese",
-            chatLink: "https://dl.dropboxusercontent.com/s/r3tl1kreg0svc2u/tradu%C3%A7%C3%A3o.json",
+            chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt-BR.json",
             startupCap: 1, 
             startupVolume: 50,
             startupEmoji: true,
