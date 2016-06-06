@@ -1739,6 +1739,52 @@
                 }
             },
             
+            amorzinhoCommand: {
+                command: 'amorzinho',
+                rank: 'user',
+                type: 'startsWith',
+                cookies: ['Disse que você é o amor da vida dele',
+                    'Te ama :heart::heart_eyes:',
+                    'Quer se casar com você :ring:',
+                    'É a melhor pessoa do mundo! :heart:',
+                    'Te acha um amorzinho :heart_eyes:',
+                    'Quer ser seu amorzinho :heart:',
+                    'Disse "Me chama de lagartixa e me joga na parede."',
+                    'Quer ter você pra sempre :heart::heart_eyes:',
+                    'Disse "Faz um meu pau de trampolim"'
+                ],
+                getCookie: function () {
+                    var c = Math.floor(Math.random() * this.cookies.length);
+                    return this.cookies[c];
+                },
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+
+                        var space = msg.indexOf(' ');
+                        if (space === -1) {
+                            API.sendChat("/me Use !amorzinho @NickDeAlguém para dar uma cantada fofa em alguém.");
+                            return false;
+                        }
+                        else {
+                            var name = msg.substring(space + 2);
+                            var user = basicBot.userUtilities.lookupUserName(name);
+                            if (user === false || !user.inRoom) {
+                                return API.sendChat("/me Use !amorzinho @NickDeAlguém para dar uma cantada fofa em alguém.");
+                            }
+                            else if (user.username === chat.un) {
+                                return API.sendChat("/me Use !amorzinho @NickDeAlguém para dar uma cantada fofa em alguém.");
+                            }
+                            else {
+                                return API.sendChat(subChat(basicBot.chat.cookie, {nameto: user.username, namefrom: chat.un, cookie: this.getCookie()}));
+                            }
+                        }
+                    }
+                }
+            },
+            
             cantadaCommand: {
                 command: 'cantada',
                 rank: 'user',
