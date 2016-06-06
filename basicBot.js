@@ -1746,12 +1746,12 @@
                 cookies: ['Disse que você é o amor da vida dele',
                     'Te ama :heart::heart_eyes:',
                     'Quer se casar com você :ring:',
-                    'É a melhor pessoa do mundo! :heart:',
+                    'Te acha a melhor pessoa do mundo! :heart:',
                     'Te acha um amorzinho :heart_eyes:',
                     'Quer ser seu amorzinho :heart:',
-                    'Disse "Me chama de lagartixa e me joga na parede."',
+                    'Quer ser sempre seu :heart_eyes:',
                     'Quer ter você pra sempre :heart::heart_eyes:',
-                    'Disse "Faz um meu pau de trampolim"'
+                    'Quer te chamar para um encontro :full_moon_with_face: :heart:'
                 ],
                 getCookie: function () {
                     var c = Math.floor(Math.random() * this.cookies.length);
