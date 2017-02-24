@@ -34,7 +34,7 @@
 
     
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "Electro Brasil Bott",
+        botName: "Electro Brasil Bot",
         language: "english",
         chatLink: "https://dl.dropboxusercontent.com/s/sh8vj2qt6difnsw/tradu%C3%A7%C3%A3o.json?dl=0",
         maximumAfk: 60,
