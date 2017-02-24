@@ -208,6 +208,9 @@
             maximumSongLength: 8,
             autocomandos: true,
             autoroleta: true,
+		tema: "Electronic Music",
+		thorCommand: true,
+		thorCooldown: 20,
             autodisable: false,
             commandCooldown: 30,
             usercommandsEnabled: true,
@@ -330,7 +333,8 @@
                         basicBot.userUtilities.moveUser(winner, pos, false);
                     }, 1 * 1000, winner, pos);
                 }
-            }
+            },
+		        usersUsedThor: []
         },
         User: function (id, name) {
             this.id = id;
@@ -786,11 +790,11 @@
             if (basicBot.settings.welcome && greet) {
                 welcomeback ?
                     setTimeout(function (user) {
-                        API.sendChat(subChat(basicBot.chat.welcomeback, {name: user.username}));
+                        API.sendChat(subChat(basicBot.chat.welcomeback, {name: user.username, tema: basicBot.settings.tema}));
                     }, 1 * 1000, user)
                     :
                     setTimeout(function (user) {
-                        API.sendChat(subChat(basicBot.chat.welcome, {name: user.username}));
+                        API.sendChat(subChat(basicBot.chat.welcome, {name: user.username, tema: basicBot.settings.tema}));
                     }, 1 * 1000, user);
             }
         },
@@ -1640,6 +1644,75 @@
                     }
                 }
             },
+		
+            thorCommand: {
+              command: 'thor',
+              rank: 'user',
+              type: 'exact',
+              functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                      if (basicBot.settings.thorCommand){
+                        var id = chat.uid,
+                              isDj = API.getDJ().id == id ? true : false,
+                              from = chat.un,
+                              djlist = API.getWaitList(),
+                              inDjList = false,
+                              oldTime = 0,
+                              usedThor = false,
+                              indexArrUsedThor,
+                              thorCd = false,
+                              timeInMinutes = 0,
+                              worthyAlg = Math.floor(Math.random() * 10),
+                              worthy = worthyAlg < 1 ? true : false;
+
+                          for (var i = 0; i < djlist.length; i++) {
+                              if (djlist[i].id == id)
+                                  inDjList = true;
+                          }
+
+                          if (inDjList) {
+                              for (var i = 0; i < basicBot.room.usersUsedThor.length; i++) {
+                                  if (basicBot.room.usersUsedThor[i].id == id) {
+                                      oldTime = basicBot.room.usersUsedThor[i].time;
+                                      usedThor = true;
+                                      indexArrUsedThor = i;
+                                  }
+                              }
+
+                              if (usedThor) {
+                                  timeInMinutes = (basicBot.settings.thorCooldown + 1) - (Math.floor((oldTime - Date.now()) * Math.pow(10, -5)) * -1);
+                                  thorCd = timeInMinutes > 0 ? true : false;
+                                  if (thorCd == false)
+                                      basicBot.room.usersUsedThor.splice(indexArrUsedThor, 1);
+                              }
+
+                              if (thorCd == false || usedThor == false) {
+                                  var user = {id: id, time: Date.now()};
+                                  basicBot.room.usersUsedThor.push(user);
+                              }
+                          }
+
+                          if (!inDjList) {
+                              return API.sendChat(subChat(basicBot.chat.thorNotClose, {name: from}));
+                          } else if (thorCd) {
+                              return API.sendChat(subChat(basicBot.chat.thorcd, {name: from, time: timeInMinutes}));
+                          }
+
+                          if (worthy) {
+                            if (API.getWaitListPosition(id) != 0)
+                            basicBot.userUtilities.moveUser(id, 1, false);
+                            API.sendChat(subChat(basicBot.chat.thorWorthy, {name: from}));
+                          } else {
+                            if (API.getWaitListPosition(id) != djlist.length - 1)
+                            basicBot.userUtilities.moveUser(id, djlist.length, false);
+                            API.sendChat(subChat(basicBot.chat.thorNotWorthy, {name: from}));
+                          }
+                        }
+                    }
+                }
+            },
 
             blinfoCommand: {
                 command: 'blinfo',
@@ -2187,6 +2260,25 @@
                     else {
                         var link = 'http://www.emoji-cheat-sheet.com/';
                         API.sendChat(subChat(basicBot.chat.emojilist, {link: link}));
+                    }
+                }
+            },
+		
+	    temaCommand: {
+                command: 'tema',
+                rank: 'manager',
+                type: 'startsWith',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+                        if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.temaatual, {tema: basicBot.settings.tema}));
+                        var argument = msg.substring(cmd.length + 1);
+                        if (argument) {
+                            basicBot.settings.tema = argument;
+                            API.sendChat(subChat(basicBot.chat.settema, {tema: basicBot.settings.tema}));
+                        }
                     }
                 }
             },
