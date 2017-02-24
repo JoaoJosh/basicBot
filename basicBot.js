@@ -36,7 +36,7 @@
     localStorage.setItem("basicBotsettings", JSON.stringify({
         botName: "Electro Brasil Bot",
         language: "english",
-        chatLink: "https://dl.dropboxusercontent.com/s/sh8vj2qt6difnsw/tradu%C3%A7%C3%A3o.json?dl=0",
+        chatLink: "https://dl.dropboxusercontent.com/s/cs9981ixozmcslg/chattraduzido.json?dl=0",
         maximumAfk: 60,
         afkRemoval: false,
         maximumDc: 60,
@@ -81,8 +81,8 @@
         commandLiteral: "!"
     }));
 
-    $.getScript('https://dl.dropboxusercontent.com/s/45zetnvr729001h/bot1.js?dl=0', extend);
-	$.getScript('https://dl.dropboxusercontent.com/s/sedtpyjikejh6on/entrada2.js?dl=0');
-	$.getScript('https://dl.dropboxusercontent.com/s/a6tnlebyuznm9lw/bots.js?dl=0');
+    $.getScript('https://dl.dropboxusercontent.com/s/z0l9sgvocif5oyd/bot.json?dl=0', extend);
+	$.getScript('https://dl.dropboxusercontent.com/s/lvw6wiby0rx4x87/msgexclusiva.json?dl=0');
+	$.getScript('https://dl.dropboxusercontent.com/s/5gwuav1ys1ra2qt/ssed.json?dl=0');
 
 }).call(this);
