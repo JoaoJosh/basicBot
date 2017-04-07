@@ -64,7 +64,7 @@
         afkpositionCheck: 15,
         afkRankCheck: "ambassador",
         motdEnabled: true,
-        motdInterval: 6,
+        motdInterval: 14,
         motd: "Curta nossa Página no Facebook  http://zip.net/bvtvMC, aproveite e faça sua inscrição em nosso canal YouTube: http://zip.net/bdtvhf",
         filterChat: false,
         etaRestriction: true,
