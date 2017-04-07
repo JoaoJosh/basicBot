@@ -25,7 +25,7 @@
                     'deu-lhe um biscoito da sorte, tem escrito: "Eu te amo"',
                     'deu-lhe um biscoito de ouro, mas não dá pra comer... Droga!',
                     'deu-lhe um biscoito de arco-íris feito com amor :heart:',
-                    'deu-lhe um biscoito que foi esquecido na chuva... eu não comeria.',
+                    'deu-lhe um biscoito que foi esquecido na chuva... eu não comeria..',
                     'quer te mostrar o biscoitao ( ͡° ͜ʖ ͡°)',
                 ];
 
